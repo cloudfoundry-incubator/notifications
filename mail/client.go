@@ -17,9 +17,10 @@ const (
 	SMTPAuthNone    = "none"
 	SMTPAuthPlain   = "plain"
 	SMTPAuthCRAMMD5 = "cram-md5"
+	SMTPAuthLogin   = "login"
 )
 
-var SMTPAuthMechanisms = []string{SMTPAuthNone, SMTPAuthPlain, SMTPAuthCRAMMD5}
+var SMTPAuthMechanisms = []string{SMTPAuthNone, SMTPAuthPlain, SMTPAuthCRAMMD5, SMTPAuthLogin}
 
 type AuthMechanism int
 
@@ -46,6 +47,35 @@ type connection struct {
 	client *smtp.Client
 	err    error
 }
+
+// login auth
+type loginAuth struct {
+	username, password string
+}
+
+func LoginAuth(username, password string) smtp.Auth {
+	return &loginAuth{username, password}
+}
+
+func (a *loginAuth) Start(server *smtp.ServerInfo) (string, []byte, error) {
+	return "LOGIN", []byte{}, nil
+}
+
+func (a *loginAuth) Next(fromServer []byte, more bool) ([]byte, error) {
+	if more {
+		switch string(fromServer) {
+		case "Username:":
+			return []byte(a.username), nil
+		case "Password:":
+			return []byte(a.password), nil
+		default:
+			return nil, errors.New("Unkown fromServer")
+		}
+	}
+	return nil, nil
+}
+
+// login auth
 
 func NewClient(config Config) *Client {
 	client := &Client{config: config}
@@ -222,6 +252,9 @@ func (c *Client) AuthMechanism(logger lager.Logger) smtp.Auth {
 	case SMTPAuthPlain:
 		c.PrintLog(logger, "plain-authentication")
 		return smtp.PlainAuth("", c.config.User, c.config.Pass, c.config.Host)
+	case SMTPAuthLogin:
+		c.PrintLog(logger, "login-authentication")
+		return LoginAuth(c.config.User, c.config.Pass)
 	default:
 		c.PrintLog(logger, "no-authentication")
 		return nil
