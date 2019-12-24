@@ -61,7 +61,7 @@ $ curl -i -X GET \
 HTTP/1.1 200 OK
 Connection: close
 Content-Length: 13
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 30 Sep 2014 21:29:36 GMT
 X-Cf-Requestid: 2cf01258-ccff-41e9-6d82-41a4441af4af
 
@@ -124,7 +124,7 @@ curl -i -X POST \
 HTTP/1.1 200 OK
 Connection: close
 Content-Length: 129
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 30 Sep 2014 21:50:13 GMT
 X-Cf-Requestid: 5c9bca88-280e-41d1-6e80-26a2a97adf4a
 
@@ -190,7 +190,7 @@ $ curl -i -X POST \
 HTTP/1.1 200 OK
 Connection: close
 Content-Length: 641
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 30 Sep 2014 22:01:34 GMT
 X-Cf-Requestid: 4dcfc91c-9cf6-4a51-497a-8ae506ce37f5
 
@@ -260,7 +260,7 @@ $ curl -i -X POST \
 
 Connection: close
 Content-Length: 897
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Thu, 06 Nov 2014 20:06:27 GMT
 X-Cf-Requestid: 3a564cd9-74c8-46f6-5d31-8a8b600fc43f
 
@@ -331,7 +331,7 @@ $ curl -i -X POST \
 
 Connection: close
 Content-Length: 897
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Thu, 06 Nov 2014 20:06:27 GMT
 X-Cf-Requestid: 3a564cd9-74c8-46f6-5d31-8a8b600fc43f
 
@@ -402,7 +402,7 @@ $ curl -i -X POST \
 
 Connection: close
 Content-Length: 897
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Thu, 06 Nov 2014 20:06:27 GMT
 X-Cf-Requestid: 3a564cd9-74c8-46f6-5d31-8a8b600fc43f
 
@@ -474,7 +474,7 @@ $ curl -i -X POST \
 HTTP/1.1 200 OK
 Connection: close
 Content-Length: 108
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 30 Sep 2014 22:27:48 GMT
 X-Cf-Requestid: eb7ee46c-2142-4a74-5b73-e4971eea511a
 
@@ -535,7 +535,7 @@ $ curl -i -X GET \
 200 OK
 Connection: close
 Content-Length: 22
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 20 Jan 2015 20:23:38 GMT
 X-Cf-Requestid: 6869ab9a-c867-4271-6edd-d0c966bf7940
 {"status":"delivered"}
@@ -615,7 +615,7 @@ $ curl -i -X PUT \
 HTTP/1.1 204 OK
 Connection: close
 Content-Length: 0
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 30 Sep 2014 22:47:50 GMT
 X-Cf-Requestid: f39e22a4-6693-4a6d-6b27-006aecc924d4
 ```
@@ -666,7 +666,7 @@ $ curl -i -X PUT \
 HTTP/1.1 204 OK
 Connection: close
 Content-Length: 0
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 30 Sep 2014 22:47:50 GMT
 X-Cf-Requestid: f39e22a4-6693-4a6d-6b27-006aecc924d4
 ```
@@ -706,7 +706,7 @@ $ curl -i \
 
 HTTP/1.1 200 OK
 Connection: close
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 02 Dec 2014 21:40:59 GMT
 X-Cf-Requestid: e3499f18-069a-4eed-720f-35baa61f1b5c
 Transfer-Encoding: chunked
@@ -795,7 +795,7 @@ Access-Control-Allow-Methods: GET, PATCH
 Access-Control-Allow-Origin: *
 Connection: close
 Content-Length: 0
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 30 Sep 2014 22:54:40 GMT
 X-Cf-Requestid: 686f601e-b6c7-4849-5699-6eed1a72004b
 ```
@@ -850,7 +850,7 @@ Access-Control-Allow-Methods: GET, PATCH
 Access-Control-Allow-Origin: *
 Connection: close
 Content-Length: 631
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 30 Sep 2014 23:19:11 GMT
 X-Cf-Requestid: 92cffe86-16fe-41a8-4b80-b10987b11060
 
@@ -952,7 +952,7 @@ Access-Control-Allow-Methods: GET, PATCH
 Access-Control-Allow-Origin: *
 Connection: close
 Content-Length: 0
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 30 Sep 2014 23:19:11 GMT
 X-Cf-Requestid: 92cffe86-16fe-41a8-4b80-b10987b11060
 ```
@@ -999,7 +999,7 @@ Access-Control-Allow-Methods: GET, PATCH
 Access-Control-Allow-Origin: *
 Connection: close
 Content-Length: 0
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 30 Sep 2014 23:07:22 GMT
 X-Cf-Requestid: bfb28efe-757e-4b65-4d48-1d2c6d7a9ce6
 ```
@@ -1054,7 +1054,7 @@ Access-Control-Allow-Methods: GET, PATCH
 Access-Control-Allow-Origin: *
 Connection: close
 Content-Length: 625
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 30 Sep 2014 23:19:11 GMT
 X-Cf-Requestid: 92cffe86-16fe-41a8-4b80-b10987b11060
 
@@ -1156,7 +1156,7 @@ Access-Control-Allow-Methods: GET, PATCH
 Access-Control-Allow-Origin: *
 Connection: close
 Content-Length: 0
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 30 Sep 2014 23:19:11 GMT
 X-Cf-Requestid: 92cffe86-16fe-41a8-4b80-b10987b11060
 ```
@@ -1219,7 +1219,7 @@ $ curl -i -X POST \
 201 Created
 Connection: close
 Content-Length: 0
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 28 Oct 2014 00:18:48 GMT
 X-Cf-Requestid: 8938a949-66b1-43f5-4fad-a91fc050b603
 
@@ -1268,7 +1268,7 @@ $ curl -i -X GET \
 200 OK
 Connection: close
 Content-Length: 0
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 28 Oct 2014 00:18:48 GMT
 X-Cf-Requestid: 8938a949-66b1-43f5-4fad-a91fc050b603
 
@@ -1345,7 +1345,7 @@ $ curl -i -X PUT \
 204 No Content
 Connection: close
 Content-Length: 0
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 28 Oct 2014 00:18:48 GMT
 X-Cf-Requestid: 8938a949-66b1-43f5-4fad-a91fc050b603
 
@@ -1389,7 +1389,7 @@ $ curl -i -X DELETE \
 204 No Content
 Connection: close
 Content-Length: 0
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 28 Oct 2014 00:18:48 GMT
 X-Cf-Requestid: 8938a949-66b1-43f5-4fad-a91fc050b603
 
@@ -1427,7 +1427,7 @@ $ curl -i -X GET \
 200 OK
 Connection: close
 Content-Length: 0
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 28 Oct 2014 00:18:48 GMT
 X-Cf-Requestid: 8938a949-66b1-43f5-4fad-a91fc050b603
 
@@ -1479,7 +1479,7 @@ $ curl -i -X GET \
 200 OK
 Connection: close
 Content-Length: 0
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 28 Oct 2014 00:18:48 GMT
 X-Cf-Requestid: 8938a949-66b1-43f5-4fad-a91fc050b603
 
@@ -1554,7 +1554,7 @@ $ curl -i -X PUT \
 204 No Content
 Connection: close
 Content-Length: 0
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 28 Oct 2014 00:18:48 GMT
 X-Cf-Requestid: 8938a949-66b1-43f5-4fad-a91fc050b603
 
@@ -1604,7 +1604,7 @@ $ curl -i -X PUT \
 204 No Content
 Connection: close
 Content-Length: 0
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 28 Oct 2014 00:18:48 GMT
 X-Cf-Requestid: 8938a949-66b1-43f5-4fad-a91fc050b603
 
@@ -1653,7 +1653,7 @@ $ curl -i -X PUT \
 204 No Content
 Connection: close
 Content-Length: 0
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 28 Oct 2014 00:18:48 GMT
 X-Cf-Requestid: 8938a949-66b1-43f5-4fad-a91fc050b603
 
@@ -1693,7 +1693,7 @@ $ curl -i -X GET \
 200 OK
 Connection: close
 Content-Length: 0
-Content-Type: text/plain; charset=utf-8
+Content-Type: application/json
 Date: Tue, 28 Oct 2014 00:18:48 GMT
 X-Cf-Requestid: 8938a949-66b1-43f5-4fad-a91fc050b603
 

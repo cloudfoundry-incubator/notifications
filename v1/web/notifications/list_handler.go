@@ -41,6 +41,7 @@ func NewListHandler(notificationsFinder listsAllClientsAndNotifications, errWrit
 
 func (h ListHandler) ServeHTTP(w http.ResponseWriter, req *http.Request, context stack.Context) {
 	clients, notifications, err := h.finder.AllClientsAndNotifications(context.Get("database").(DatabaseInterface))
+
 	if err != nil {
 		h.errorWriter.Write(w, err)
 		return
@@ -84,6 +85,7 @@ func writeJSON(w http.ResponseWriter, status int, object interface{}) {
 		panic(err) // No JSON we write into a response should ever panic
 	}
 
+	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(status)
 	w.Write(output)
 }

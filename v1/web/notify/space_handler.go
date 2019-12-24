@@ -32,6 +32,7 @@ func (h SpaceHandler) ServeHTTP(w http.ResponseWriter, req *http.Request, contex
 		return
 	}
 
+	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 	w.Write(output)
 }

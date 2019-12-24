@@ -17,6 +17,9 @@ func NewErrorWriter() ErrorWriter {
 }
 
 func (writer ErrorWriter) Write(w http.ResponseWriter, err error) {
+
+	w.Header().Set("Content-Type", "application/json")
+
 	switch err.(type) {
 	case UAAScopesError, CriticalNotificationError, collections.TemplateAssignmentError, MissingUserTokenError, ValidationError:
 		w.WriteHeader(422)

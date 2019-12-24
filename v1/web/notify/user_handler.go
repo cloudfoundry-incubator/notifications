@@ -32,6 +32,7 @@ func (h UserHandler) ServeHTTP(w http.ResponseWriter, req *http.Request, context
 		return
 	}
 
+	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 	w.Write(output)
 }

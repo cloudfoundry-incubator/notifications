@@ -15,7 +15,6 @@ func NewGetHandler() GetHandler {
 }
 
 func (handler GetHandler) ServeHTTP(w http.ResponseWriter, req *http.Request, context stack.Context) {
-	w.WriteHeader(http.StatusOK)
 	output, err := json.Marshal(map[string]interface{}{
 		"version": 1,
 	})
@@ -24,5 +23,7 @@ func (handler GetHandler) ServeHTTP(w http.ResponseWriter, req *http.Request, co
 		return
 	}
 
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusOK)
 	w.Write(output)
 }
